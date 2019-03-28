@@ -18,8 +18,9 @@ from send_email_with_attachments import send_an_email, send_an_email_to_visitor
 
 app = Flask(__name__)
 
-from config import secret_key
-app.config['SECRET_KEY'] = secret_key
+#from config import secret_key
+#app.config['SECRET_KEY'] = secret_key
+app.config['SECRET_KEY']  = os.environ.get('secret_key', None)
 
 app.config["TEMPLATES_AUTO_RELOAD"] = True
 
