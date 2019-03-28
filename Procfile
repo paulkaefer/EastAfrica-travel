@@ -1,1 +1,0 @@
-web: gunicorn EastAfrica-travel.app:app
